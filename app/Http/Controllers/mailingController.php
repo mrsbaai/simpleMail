@@ -17,13 +17,8 @@ class mailingController extends Controller
         $content['from'] = "fetedesdiots@orange.fr";
         $content['subject'] = "Test from laravel";
         $content['body'] = "This is a simple test from laravel.";
-
-
-        Mail::to($to)->send(new minimal($content));
-
-
-
-
+        
+        return Mail::to($to)->send(new minimal($content));
 
     }
 }
